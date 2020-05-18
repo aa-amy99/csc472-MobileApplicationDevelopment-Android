@@ -21,7 +21,7 @@ public class OfficialDataLoader extends AsyncTask<String, Void, String> {
         private MainActivity mainActivity;
         private String city, state, zipcode;
         private static final String myURL = "https://www.googleapis.com/civicinfo/v2/representatives?key=";
-        private static final String yourAPIKey = "AIzaSyBvWBu4ovaX17hKF6w5yli85p1xBlDSqfU";
+        private static final String yourAPIKey = ;//Google API key has been taken out for security purpose
 
 
         //Constructor
