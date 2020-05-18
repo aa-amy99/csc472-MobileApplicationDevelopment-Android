@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Multi Notes</string>
+    <string name="_2019_amy_aumpansub">© 2019, Amy Aumpansub</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="multi_notes">Multi Notes</string>
+    <string name="mytext">mytext</string>
+    <string name="mytimestamp">mytimestamp</string>
+    <string name="mytitle">mytitle</string>
+    <string name="info">info</string>
+    <string name="addnote">addnote</string>
+</resources>

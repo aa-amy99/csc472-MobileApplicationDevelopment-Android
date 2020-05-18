@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:autoText="false"
+        android:background="#456F6565"
+        android:onClick="clearOutput"
+        android:text="CLEAR"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/bottomGrid"
+        app:layout_constraintEnd_toEndOf="@+id/history"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/history" />
+
+    <TextView
+        android:id="@+id/conversionHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Conversion:"
+        android:textColor="#9A000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/rightGrid"
+        app:layout_constraintStart_toStartOf="@+id/leftGrid"
+        app:layout_constraintTop_toTopOf="@+id/topGrid" />
+
+    <TextView
+        android:id="@+id/tempInputHeader"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Fahrenheit Degrees:"
+        android:textColor="#A6000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/leftGrid"
+        app:layout_constraintTop_toBottomOf="@+id/RadioGroup1" />
+
+    <Button
+        android:id="@+id/convertBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#456F6565"
+        android:onClick="convertTemp"
+        android:text="CONVERT"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/temInput"
+        app:layout_constraintStart_toStartOf="@+id/tempInputHeader"
+        app:layout_constraintTop_toBottomOf="@+id/tempInputHeader" />
+
+    <TextView
+        android:id="@+id/historyHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Conversion History:"
+        android:textColor="#A6000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tempOutput"
+        app:layout_constraintStart_toStartOf="@+id/tempOutputHeader"
+        app:layout_constraintTop_toBottomOf="@+id/tempOutputHeader" />
+
+    <TextView
+        android:id="@+id/tempOutputHeader"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Celsius Degrees:"
+        android:textColor="#A6000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/convertBtn"
+        app:layout_constraintTop_toBottomOf="@+id/convertBtn" />
+
+    <TextView
+        android:id="@+id/tempOutput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="15dp"
+        android:background="#456F6565"
+        android:ems="10"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/historyHeader"
+        app:layout_constraintEnd_toEndOf="@+id/convertBtn"
+        app:layout_constraintStart_toStartOf="@+id/temInput"
+        app:layout_constraintTop_toBottomOf="@+id/convertBtn" />
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:background="#456F6565"
+        android:scrollbars="vertical"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/clearBtn"
+        app:layout_constraintEnd_toEndOf="@+id/tempOutput"
+        app:layout_constraintStart_toStartOf="@+id/historyHeader"
+        app:layout_constraintTop_toBottomOf="@+id/historyHeader" />
+
+    <EditText
+        android:id="@+id/temInput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="16dp"
+        android:background="#456F6565"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberSigned|number|numberDecimal"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/convertBtn"
+        app:layout_constraintEnd_toStartOf="@+id/rightGrid"
+        app:layout_constraintStart_toEndOf="@+id/tempInputHeader"
+        app:layout_constraintTop_toBottomOf="@+id/RadioGroup1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:checkedButton="@id/ftoCbutton"
+        app:layout_constraintEnd_toStartOf="@+id/rightGrid"
+        app:layout_constraintStart_toStartOf="@+id/leftGrid"
+        app:layout_constraintTop_toBottomOf="@+id/conversionHeader">
+
+        <RadioButton
+            android:id="@+id/ftoCbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="groupClick1"
+            android:text="Fahrenheit to Celcius"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/cToFbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="groupClick1"
+            android:text="Celsius to Fahrenheit"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
